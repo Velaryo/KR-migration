@@ -1,47 +1,36 @@
 {
-    "Active": {
+    "mig_id": {
+        "create": true,
+        "generateNumbers": true
+    },
+    "idtbien": {
         "removeWhitespace":false,
         "changeText": true,
         "isDate": false,
         "removePrefixe": false,
         "values": [
-            {"current_value": "oui", "modified_value": "YES"},
-            {"current_value": "non", "modified_value": "NO"}
+            {"current_value": 1, "modified_value": "Appartement"},
+            {"current_value": 2, "modified_value": "Maison"},
+            {"current_value": 3, "modified_value": "Parking"},
+            {"current_value": 4, "modified_value": "Terrain"},
+            {"current_value": 5, "modified_value": "Duplex"},
+            {"current_value": 6, "modified_value": "Studio "},
+            {"current_value": 7, "modified_value": "Boutique"},
+            {"current_value": 8, "modified_value": "Commerce"},
+            {"current_value": 9, "modified_value": "Bureau"},
+            {"current_value": 10, "modified_value": "Immeuble"}
         ]
     },
-    "Slug": {
+    "cheminee": {
         "removeWhitespace":false,
         "changeText": true,
         "isDate": false,
         "removePrefixe": false,
         "values": [
-            {"current_value": "001a00001", "modified_value": "11111"},
-            {"current_value": "003a00001", "modified_value": "22222"}
+            {"current_value": "f", "modified_value": "Aucune"},
+            {"current_value": "t", "modified_value": "Il y a une cheminée, mais le type de cheminée doit être determiné."}
         ]
     },
-
-    "civilite": {
-        "removeWhitespace":false,
-        "changeText": true,
-        "isDate": false,
-        "removePrefixe": false,
-        "values": [
-            {"current_value": "MME", "modified_value": "FEMME"},
-            {"current_value": "M", "modified_value": "HOMME"}
-        ]
-    },
-
-    "idappli": {
-        "removeWhitespace":false,
-        "changeText": true,
-        "isDate": false,
-        "removePrefixe": false,
-        "values": [
-            {"current_value": 4, "modified_value": "XXXXX"}
-        ]
-    },
-
-
 
     "dcreat": {
         "removeWhitespace":false,
@@ -51,8 +40,8 @@
         "current_format": [
             {"format_1": "dd/mm/yyyy", "flag": false},
             {"format_2": "dd-mm-yyyy", "flag": false},
-            {"format_3": "dd/MM/yyyy HH:mm", "flag": true},
-            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": false}
+            {"format_3": "dd/MM/yyyy HH:mm", "flag": false},
+            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": true}
         ]
     },
     "dmodif": {
@@ -67,6 +56,11 @@
             {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": true}
         ]
     },
+
+
+
+    
+
     "mobile": {
         "changeText": false,
         "isDate": false,

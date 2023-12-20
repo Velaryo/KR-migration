@@ -1,0 +1,86 @@
+{
+    "mig_id": {
+        "create": true,
+        "generateNumbers": true
+    },
+    "Active": {
+        "removeWhitespace":false,
+        "changeText": true,
+        "isDate": false,
+        "removePrefixe": false,
+        "values": [
+            {"current_value": "oui", "modified_value": "YES"},
+            {"current_value": "non", "modified_value": "NO"}
+        ]
+    },
+    "Slug": {
+        "removeWhitespace":false,
+        "changeText": true,
+        "isDate": false,
+        "removePrefixe": false,
+        "values": [
+            {"current_value": "001a00001", "modified_value": "11111"},
+            {"current_value": "003a00001", "modified_value": "22222"}
+        ]
+    },
+
+    "civilite": {
+        "removeWhitespace":false,
+        "changeText": true,
+        "isDate": false,
+        "removePrefixe": false,
+        "values": [
+            {"current_value": "MME", "modified_value": "FEMME"},
+            {"current_value": "M", "modified_value": "HOMME"}
+        ]
+    },
+
+    "idappli": {
+        "removeWhitespace":false,
+        "changeText": true,
+        "isDate": false,
+        "removePrefixe": false,
+        "values": [
+            {"current_value": 4, "modified_value": "XXXXX"}
+        ]
+    },
+
+
+
+    "dcreat": {
+        "removeWhitespace":false,
+        "changeText": false,
+        "removePrefixe": false,
+        "isDate": true,
+        "current_format": [
+            {"format_1": "dd/mm/yyyy", "flag": false},
+            {"format_2": "dd-mm-yyyy", "flag": false},
+            {"format_3": "dd/MM/yyyy HH:mm", "flag": true},
+            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": false}
+        ]
+    },
+    "dmodif": {
+        "changeText": false,        
+        "removePrefixe": false,
+        "removeWhitespace":false,
+        "isDate": true,
+        "current_format": [
+            {"format_1": "dd/mm/yyyy", "flag": false},
+            {"format_2": "dd-mm-yyyy", "flag": false},
+            {"format_3": "dd/MM/yyyy HH:mm", "flag": false},
+            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": true}
+        ]
+    },
+    "mobile": {
+        "changeText": false,
+        "isDate": false,
+        "removePrefixe": true,
+        "removeWhitespace": true,
+        "current_format": [
+            {"format_1": "dd/mm/yyyy", "flag": false},
+            {"format_2": "dd-mm-yyyy", "flag": false},
+            {"format_3": "dd/MM/yyyy HH:mm", "flag": false},
+            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": true}
+        ]
+    }
+}

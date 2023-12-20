@@ -90,7 +90,26 @@ pip install -r requirements.txt
 }
 ```
 
+- Create / generateNumbers: [bool] - Crea el campo *mig_id* siempre y cuando no exista. Luego genera números de forma correlativa.
+
+```json
+{
+    "mig_id": {
+        "create": true,
+        "generateNumbers": true
+    },
+}
+```
 
 # Consideraciones.
 - Todas las propiedades deben ser usadas siempre (excepto current_format y values). Si una propiedad no es necesaria, dar el valor **false**.
 - Se recomienda revisar constantemente el resultado mientras vaya configurando el archivo JSON.
+- Al configurar el JSON, tener cuidado con que si el valor es un string, numérico o un booleano. Si es string, lleva comillas; esto es a nivel del formato que tenga en el CSV, puede suceder que el supuesto número (1, 2), en realidad sea un texto ("1", "2").
+```json
+{
+    ...
+    "values": [
+            {"current_value": 1, "modified_value": "Appartement"},
+    ...
+}
+```
