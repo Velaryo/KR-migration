@@ -30,7 +30,16 @@ if 'mig_id' in jsonRules and jsonRules['mig_id'].get('create', False):
         datos['mig_id'] = None
 
 #?##################################
-    
+
+#borra los saltos de linea
+modifications = jsonRules.get("@modifications")
+
+if modifications and modifications.get("cleanLinebreak", {}).get("flag", False):
+    value_to_replace = modifications["cleanLinebreak"]["value_to_remplace"]
+    for col in datos.columns:
+        datos[col] = datos[col].replace(to_replace=value_to_replace, value="", regex=False)
+
+#?
 
 for column_name, rules in jsonRules.items():
 
@@ -57,12 +66,6 @@ for column_name, rules in jsonRules.items():
             for value_set in values_to_change:
                 current_value = value_set.get("current_value")
                 modified_value = value_set.get("modified_value")
-
-
-
-                print(value_set.get("modified_value"))
-
-
                 
                 if current_value and modified_value:
                     if column_name in datos.columns:
@@ -71,8 +74,8 @@ for column_name, rules in jsonRules.items():
     #** REMOVE PREFIXE
     if rules.get("removePrefixe", False):
         if column_name in datos.columns: 
-            datos[column_name] = datos[column_name].apply(lambda x: x[2:] if isinstance(x, str) and x.startswith("33") else x)
             datos[column_name] = datos[column_name].apply(lambda x: x[1:] if isinstance(x, str) and x.startswith("+") else x)
+            datos[column_name] = datos[column_name].apply(lambda x: x[2:] if isinstance(x, str) and x.startswith("33") else x)
     
     #** GENERA NÚMEROS PARA EL MIG_ID
     if column_name == 'mig_id':

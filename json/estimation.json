@@ -1,4 +1,10 @@
 {
+    "@modifications": {
+        "cleanLinebreak": {
+            "flag": true,
+            "value_to_remplace": ["\\N", "\\n"]
+        }
+    },
     "mig_id": {
         "create": true,
         "generateNumbers": true
@@ -59,7 +65,7 @@
 
 
 
-    
+
 
     "mobile": {
         "changeText": false,
