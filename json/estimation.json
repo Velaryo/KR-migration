@@ -27,6 +27,7 @@
             {"current_value": 10, "modified_value": "Immeuble"}
         ]
     },
+    
     "cheminee": {
         "removeWhitespace":false,
         "changeText": true,
@@ -71,12 +72,6 @@
         "changeText": false,
         "isDate": false,
         "removePrefixe": true,
-        "removeWhitespace": true,
-        "current_format": [
-            {"format_1": "dd/mm/yyyy", "flag": false},
-            {"format_2": "dd-mm-yyyy", "flag": false},
-            {"format_3": "dd/MM/yyyy HH:mm", "flag": false},
-            {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": true}
-        ]
+        "removeWhitespace": true
     }
 }

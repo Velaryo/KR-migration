@@ -86,13 +86,13 @@ for column_name, rules in jsonRules.items():
                         
 
 # Mostrar los datos modificados
-print("\nDatos modificados:")
+print("\nCSV ORIGINAL:")
 print(datos)
 
 columnas_especificas = col_to_display
 datos_especificos = datos[columnas_especificas]
 
-print("\nESPECIFICOS:")
+print("\nCSV MOD. COLUMNAS:")
 print(datos_especificos)
 
 # Guardar los cambios en un nuevo archivo CSV
