@@ -4,17 +4,18 @@ import utils
 
 
 #todo: Mod.
-input = "csv_input/estimations-actives-APOLLON.csv"
-output = "csv_output/estimations-actives-APOLLON.csv__MODIFICADO.csv"
-name_json = "json/estimation.json"
+input = "estimations-actives-APOLLON.csv"
+output = "estimations-actives-APOLLON.csv__MODIFICADO.csv"
+name_json = "estimation.json"
 delimiter_value = ","
+col_to_display = ['id', 'dcreat', 'dmodif', 'idtbien', 'cheminee', 'mig_id']
 
 
 # Lectura CSV & JSON
-with open(name_json, 'r', encoding='utf-8') as archivo_json:
+with open("json/" + name_json, 'r', encoding='utf-8') as archivo_json:
             jsonRules = json.load(archivo_json)
 
-file_CSV = input
+file_CSV = "csv_input/" + input
 encoding = utils.detect_encoding(file_CSV)
 
 try:
@@ -88,14 +89,14 @@ for column_name, rules in jsonRules.items():
 print("\nDatos modificados:")
 print(datos)
 
-columnas_especificas = ['id', 'dcreat', 'dmodif', 'idtbien', 'cheminee', 'mig_id']
+columnas_especificas = col_to_display
 datos_especificos = datos[columnas_especificas]
 
 print("\nESPECIFICOS:")
 print(datos_especificos)
 
 # Guardar los cambios en un nuevo archivo CSV
-res = output
+res = "csv_output/" + output
 datos.to_csv(res, index=False)
 print(f"\nGuardado en '{res}'")
 

@@ -5,7 +5,7 @@
 - Descarga del script: https://github.com/Velaryo/KR-migration
 
 # ACTIVACIÓN DEL ENTORNO VIRTUAL:
-1. Descomprimir el script en una carpeta e ingresar en ella. Ubicarse hasta ver el archivo 'app.py'.
+1. Descomprimir el script en una carpeta e ingresar a ella. Ubicarse hasta ver el archivo 'app.py'.
 
 2. Abrir el terminal/CMD/consola y escribir:
 ```
@@ -28,13 +28,21 @@ pip install -r requirements.txt
 ```
 
 # Básico:
-- Colocar el archivo a manipular en la carpeta "csv_input".
-- El resultado se generará en la carpeta "csv_output".
-- El nombre de entrada y salida, el delimitador y el nombre del archivo .json' deben ser asignados en el archivo 'app.py'.
+- Estructura de archivos y carpetas de importancia:
+    - **csv_input:** Almacena los archivos a modificar. Puede tener varios archivos, pero solo se modificará 1 por vez.
+    - **csv_output:** Aquí se guarda el archivo generado. Puede almacenar varios archivos generados para cada archivo a modificar (csv_input), solo hay que tener cuidado con el nombre que se le dé en 'app.py' porque puede reemplazar el existente.
+    - **json:** Almacena el archivo con las reglas para la modificación del archivo csv (csv_input). Puede haber varios archivos json, pero solo usará 1 por vez (el que se asigne en 'app.py').
+
+- Variables importantes de 'app.py':
+    - **input:** Nombre (con extensiób '.csv') del archivo csv a modificar.
+    - **output:** Nombre (con extensiób '.csv') del archivo csv a generar.
+    - **name_json:** Nombre (con extensiób '.json') del archivo JSON con las reglas a seguir para la modificación.
+    - **delimiter_value:** Delimitador.
+    - **col_to_display:** Nombres de las columnas a mostrar en la terminal. No afecta en nada al archivo generado, solo es visual.
 
 # Consideraciones.
 - Algunas propiedades son de importancia para el proceso aunque no se utilcen. Guiarse de los ejemplos ubicados en '/json/estimation.json'.
-- Se recomienda revisar constantemente el resultado mientras vaya configurando el archivo JSON.
+- Se recomienda revisar constantemente el resultado mientras se vaya configurando el archivo JSON.
 - Al configurar el JSON, tener cuidado con que si el valor es un string, numérico o un booleano. Si es string, lleva comillas; esto es a nivel del formato que tenga en el CSV, puede suceder que el supuesto número (1, 2), en realidad sea un texto ("1", "2").
 ```json
 {
@@ -140,4 +148,11 @@ pip install -r requirements.txt
         {"format_4": "yyyy-MM-dd HH:mm:ss", "flag": false}
     ]
 }
+```
+
+## Ejecución
+Teniendo el entorno activado: Debe mostrarse (venv) adelante de la ruta donde se encuentra (en la terminal); ejecutar el comando:
+
+```
+python app.py
 ```
