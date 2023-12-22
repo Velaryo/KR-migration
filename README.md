@@ -12,17 +12,22 @@
 pip install virtualenv
 ```
 
-3. Escribir:
+3. Generar el entorno virtual
+```
+virtualenv venv
+```
+
+4. Escribir:
 ```
 Set-ExecutionPolicy Unrestricted -Scope Process
 ```
 
-4. Activar el entorno virtual:
+5. Activar el entorno virtual:
 ```
 venv\Scripts\activate
 ```
 
-5. Instalación de dependencias:
+6. Instalación de dependencias:
 ```
 pip install -r requirements.txt
 ```
