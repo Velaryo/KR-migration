@@ -9,11 +9,10 @@
         "create": true,
         "generateNumbers": true
     },
+
+
     "idtbien": {
-        "removeWhitespace":false,
         "changeText": true,
-        "isDate": false,
-        "removePrefixe": false,
         "values": [
             {"current_value": 1, "modified_value": "Appartement"},
             {"current_value": 2, "modified_value": "Maison"},
@@ -28,21 +27,17 @@
         ]
     },
     
-    "cheminee": {
-        "removeWhitespace":false,
+    "cheminee": {     
         "changeText": true,
-        "isDate": false,
-        "removePrefixe": false,
         "values": [
             {"current_value": "f", "modified_value": "Aucune"},
             {"current_value": "t", "modified_value": "Il y a une cheminée, mais le type de cheminée doit être determiné."}
         ]
     },
 
+
+    
     "dcreat": {
-        "removeWhitespace":false,
-        "changeText": false,
-        "removePrefixe": false,
         "isDate": true,
         "current_format": [
             {"format_1": "dd/mm/yyyy", "flag": false},
@@ -52,9 +47,6 @@
         ]
     },
     "dmodif": {
-        "changeText": false,        
-        "removePrefixe": false,
-        "removeWhitespace":false,
         "isDate": true,
         "current_format": [
             {"format_1": "dd/mm/yyyy", "flag": false},
